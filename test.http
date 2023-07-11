@@ -1,9 +1,13 @@
-GET http://localhost:3001/api/tasks HTTP/1.1
+GET http://localhost:3001/api/tasks
 
 ###
-GET http://localhost:3001/api/tasks/2 HTTP/1.1
 
+POST http://localhost:3001/api/tasks
+content-type: application/json
+
+{
+    "text": "go to concert"
+}
 ###
-DELETE  http://localhost:3001/api/tasks/2 HTTP/1.1
 
-
+DELETE http://localhost:3001/api/tasks/4
