@@ -1,15 +1,9 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-// give each todo a unique id
-let id = 0
 
 const newTodo = ref('')
-const todos = ref([
-  { id: id++, text: 'Learn HTML' },
-  { id: id++, text: 'Learn JavaScript' },
-  { id: id++, text: 'Learn Vue' }
-])
+const todos = ref([])
 async function fetchTasks() {
   try {
     const response = await fetch('/api/tasks');
